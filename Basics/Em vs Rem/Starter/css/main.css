@@ -22,5 +22,21 @@ body {
     background: white;
     border-radius: 1em;
     padding: 0 2em;
+    font-size: 14px;
+}
 
+.card1 h1 {
+    font-size: 2rem;
+}
+
+.card1 p {
+    font-size: 1rem;
+}
+
+.card2 h1 {
+    font-size: 2em;
+}
+
+.card2 p {
+    font-size: 1em;
 }
