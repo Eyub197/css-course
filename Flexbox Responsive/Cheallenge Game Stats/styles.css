@@ -56,7 +56,11 @@ h2 {
 
 
 /* layout */
-main, .stats-item, .tablet-layout {
+
+main, 
+.stats-item, 
+.tablet-layout,
+.stats {
     display: flex;
 }
 
@@ -71,14 +75,13 @@ main {
 }
 
 .stats-current {
-    padding: 3.4375em 0em 3.4375em 2.875em;
+    padding: 3.4375em 2.875em 3.4375em 2.875em;
 }
 
 .stats {
-    display: flex;
     flex-direction: column;
     gap: 3.375em;
-    padding: 4em 0em 4em 2.875em;
+    padding: 4em 2.875em 4em 2.875em;
     border: 3px solid #2E2E2E;
 }
 
@@ -100,6 +103,28 @@ button {
 
 /* media */
 
-@media (min-width: 560px) {
+@media (min-width: 795px) {
 
+    .tablet-layout, .stats {
+        flex-direction: row;
+    }
+
+    .stats-current {
+        flex-basis: 40%;
+    }
+
+    .stats {
+        flex-basis: 60%;
+    }
+}
+
+
+@media (min-width: 1100px) {
+    main {
+        flex-direction: row;
+    }
+
+   .launch {
+    flex-basis: 25%;
+   }  
 }
