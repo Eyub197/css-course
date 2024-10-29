@@ -12,63 +12,68 @@ body {
     background-color: #D7DED3;
     font-family: 'Poppins';
 }
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-section {
-    background: white;
-    padding: 3em;
-    border-radius: .8em;
-    display: flex;
-    flex-direction: column;
-    gap: 13.5em;
-}
 
-.left-col {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    flex: .6;
+/* typography */
+
+h1, a.cta p {
+    margin: 0;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 4rem;
     font-weight: normal;
-    margin: 0;
 }
 
 p {
     font-size: 2rem;
 }
 
-a.cta {
-    font-family: 'Playfair Display', serif;
+/* layout */
+
+section, .left-col, 
+a.cta, 
+.right-col {
     display: flex;
-    align-items: center;
-    gap: 1em;
-    text-decoration: none;
-    color: #406A29;
-    font-weight: bold;
-    margin-top: auto;
 }
 
-a.cta p {
-    margin: 0;
+section, .left-col {
+    flex-direction: column;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    gap: 13.5em;
+    padding: 3em;
+    background: white;
+    border-radius: .8em;
+}
+
+.left-col {
+    flex: .6;
+}
+
+a.cta {
+    align-items: center;
+    gap: 1em;
+    margin-top: auto;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #406A29;
 }
 
 .right-col {
-    display: flex;
     flex: 1;
     flex-wrap: wrap;
     gap: 2.8em;
 }
 
-
-.hide-mobile {
-    display: none;
-}
+/* boxes */
 
 .box {
     width: calc(50% - 2em);
@@ -99,7 +104,14 @@ a.cta p {
     background-color: #BBC8E1;
 }
 
-@media screen and (min-width: 800px) {
+
+/* utilities */
+
+.hide-mobile {
+    display: none;
+}
+
+@media (min-width: 800px) {
     .wrapper {
         margin: 10em auto;
     }
@@ -107,12 +119,14 @@ a.cta p {
     .hide-mobile {
         display: block;
     }
+
     .box {
-        width: calc(33.33% - 2em);
+        width: calc(30% - 2em);
     }
+
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
     section {
         flex-direction: row;
     }
