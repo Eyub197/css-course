@@ -23,7 +23,9 @@ main p span, button {
 
 /* typography */
 
+
 h1, h2, p {
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -35,10 +37,6 @@ h1, h2, p {
 
 h1 {
     font-size: 3.4375rem;
-}
-
-h2, p {
-    margin-top: 0;
 }
 
 .stats-current p {
@@ -58,24 +56,28 @@ h2 {
 
 
 /* layout */
-main, .stats-item {
+main, .stats-item, .tablet-layout {
     display: flex;
 }
 
-main {
+main, .tablet-layout {
     flex-direction: column;
     gap: 1.75em;
+}
+
+main {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .stats-current {
-    width: 100%;
-    padding-left: 2.875em;
-    padding-bottom: 3.4375em;
+    padding: 3.4375em 0em 3.4375em 2.875em;
 }
 
 .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 3.375em;
     padding: 4em 0em 4em 2.875em;
     border: 3px solid #2E2E2E;
 }
@@ -98,3 +100,6 @@ button {
 
 /* media */
 
+@media (min-width: 560px) {
+
+}
