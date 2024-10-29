@@ -8,61 +8,31 @@ body {
     margin: 0;
 }
 
-header {
-    background-color: #DBE1E8;
-    padding: 2.5em;
-}
-
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-a.logo {
-    color: #0460BC;
-    font-size: 2.2rem;
-    font-weight: bold;
-}
 a {
     text-decoration: none;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 4.3em;
+ul li a, a.cart {
+    color:  black;
+}
+
+/* typography */
+
+a.logo, ul li a:hover {
+    color: #0460BC;
+}
+
+a.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
 }
 
 ul li a {
     font-size: 1.8rem;
-    color: black;
 }
 
 ul li a.active {
     font-weight: bold;
-}
-
-ul li a:hover {
-    color: #0460BC;
-}
-
-a.cart {
-    background-color: #C3CCD7;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    color: black;
-    font-size: 1.8rem;
-    padding: 1rem;
-    border-radius: .4rem;
 }
 
 a.cart p {
@@ -71,4 +41,107 @@ a.cart p {
 
 a.cart:hover {
     background-color: #B5C0CE;
+}
+
+
+/* layout */
+
+.navbar, 
+ul, 
+a.cart,
+.mobile-cart-menu{
+    display: flex;
+}
+
+.navbar,
+ a.cart,
+ .mobile-cart-menu {
+    align-items: center;
+}
+
+
+header {
+    padding: 2.5em;
+    background-color: #DBE1E8;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 33%;
+    padding: 4.6em;
+    background-color: white;
+    transition: right .5s ease-in-out;
+    z-index: 1;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4.3em;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+a.cart {
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color: #C3CCD7;
+    border-radius: .4rem;
+}
+
+
+.mobile-cart-menu {
+    gap: 2em;
+}
+    
+/* buttons */
+    
+.close-btn, .menu-btn {
+    display: block;
+    cursor: pointer;
+    width: 3rem;
+}
+
+.close-btn {
+    margin-left: auto;
+    margin-bottom: 6.6rem;
+}
+
+/* utilities */
+
+.open {
+    right: 0;
+}
+
+
+@media (min-width: 600px) {
+    .menu-btn, .close-btn {
+        display: none;
+    }
+
+    nav {
+        position: unset;
+        height: auto;
+        background: none;
+        padding: 0;
+        width: auto;
+    }
+ 
+    ul{
+        flex-direction: row;
+    }
 }
